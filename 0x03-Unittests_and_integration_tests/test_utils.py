@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """A unittest that checks a method works as intended."""
-import unittest
+from unittest import TestCase
 from parameterized import parameterized
 from utils import access_nested_map
 
 
-class TestAccessNestedMap(unittest.TestCase):
+class TestAccessNestedMap(TestCase):
     """
     A test case class for the access_nested_map function.
 
@@ -33,8 +33,5 @@ class TestAccessNestedMap(unittest.TestCase):
         It compares the result obtained from the function
         with the expected result.
         """
-        self.assertEqual(access_nested_map(nested_map, path), expected_result)
-
-
-if __name__ == '__main__':
-    unittest.main()
+        actual_output = access_nested_map(nested_map, path)
+        self.assertEqual(actual_output, expected_result)
