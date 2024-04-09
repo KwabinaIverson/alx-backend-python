@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """A unittest that checks a method works as intended."""
 from unittest import TestCase, mock
 from parameterized import parameterized
